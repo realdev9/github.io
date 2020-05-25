@@ -1,23 +1,16 @@
----
-# 수정하지 않습니다.
-layout: post
-# 포스트 제목을 기재합니다.
-title: '너드팩토리 개발문서의 변천사'
-# 저자를 입력합니다. 리스트형태로 복수의 저자를 추가할 수 있습니다.
-author: ['황종택']
-# 포스트 공개일을 입력합니다. 파일명의 날짜와 일치해야 하며 미래의 날짜로 입력된 포스트는 공개되지 않습니다.
-date: 2018-12-12 05:00:01 -0600
-# 블로그 메인페이지에 썸네일과 함께 노출될 텍스트를 입력합니다. 일정 길이를 초과하면 잘려서 표시됩니다.
-abstract: '공적이고 일반적인 소프트웨어 개발 프로젝트는 진행되는 과정에서 문서가 생산 됩니다. 서비스 기획서, 디자인 가이드, API 문서, 인터페이스 정의서 등 소프트웨어 개발의 거의 모든 단계에서 각자의 목적에 맞는 문서가 작성됩니다. 이들 문서는 종이 인쇄물 생산을 위해 워드프로세서로 작성되기도 하고, 프리젠테이션을 위해 프리젠테이션 소프트웨어로 생산되기도 합니다. 각 분야의 문서는 목적을 달성하기 위해 생산/활용 측면에서 발전되어 왔습니다.'
-# 태그를 입력합니다.
-tags: ['너드팩토리', '문서화', '개발문서']
-# 대표 이미지를 입력합니다. 이미지 업로드 위치는 아래에 기술합니다.
-image: /assets/images/posts/nerdfactory-documentation-history/main.jpg
-# 포스트의 초안 여부를 입력합니다. "no" 로 입력할 경우 공개됩니다.
-draft: 'yes'
+# 섹션 1 : Vue 관련 개념 정리
+
 ---
 
-# 섹션 1 : Vue 관련 개념 정리
+layout: 'post'
+title: 'Vue.js가 무엇인가'
+author: ['배동훈']
+date: '2020-5-01 05:00:01 -0600'
+tags: ['vuejs', 'plogger', 'vue']
+image: ''
+draft: 'yes'
+
+---
 
 지금부터는 Vue 에 대해 본격적인 공부에 앞서 Vue 와 관련된 개념을 이해하고, 다른 프레임웍과 비교하는 시간을 가지겠습니다.
 
@@ -28,27 +21,27 @@ Vue는 사용자 인터페이스를 만들기 위한 프로그레시브 프레�
 
 ---
 
-## Vue는 점진적으로 채택할 수 있도록 설계되었습니다.
+### Vue는 점진적으로 채택할 수 있도록 설계되었습니다
 
-### → vue -> vue router -> vuex
-
----
-
-## 싱글 파일 컴포넌트(Single File Components, SFC) 란
-
-### → .vue 확장자를 가진 싱글 파일 컴포넌트
+#### → vue -> vue router -> vuex
 
 ---
 
-## Awesome Vue.js - Vue.js와 관련된 선별 된 Awesome 한 목록
+### 싱글 파일 컴포넌트(Single File Components, SFC) 란
 
-### → <https://github.com/vuejs/awesome-vue>
+#### → .vue 확장자를 가진 싱글 파일 컴포넌트
 
 ---
 
-## 지원하는 라이브러리
+### Awesome Vue.js - Vue.js와 관련된 선별 된 Awesome 한 목록
 
-### → <https://github.com/vuejs/awesome-vue#components--libraries>
+#### → <https://github.com/vuejs/awesome-vue>
+
+---
+
+### 지원하는 라이브러리
+
+#### → <https://github.com/vuejs/awesome-vue#components--libraries>
 
 - Table,
 - Notification(modeless little Popup),
@@ -60,42 +53,42 @@ Vue는 사용자 인터페이스를 만들기 위한 프로그레시브 프레�
 
 ---
 
-## 단일 페이지 응용 프로그램(Single Page Application) 을 개발하는 데 용이하다.
+### 단일 페이지 응용 프로그램(Single Page Application) 을 개발하는 데 용이하다
 
 ---
 
-## 다른 프레임워크들과의 비교
+### 다른 프레임워크들과의 비교
 
-### → <https://kr.vuejs.org/v2/guide/comparison.html>
+#### → <https://kr.vuejs.org/v2/guide/comparison.html>
 
-## 1. Vue vs React
+### 1. Vue vs React
 
-## [공통점]
+#### [공통점]
 
 - 가상 DOM 활용
 - 반응형이고 조합 가능한 컴포넌트 제공
 - 코어 라이브러리에 집중, 라우팅 및 전역 상태 관리하는 라이브러리 지원
 
-## [차이점]
+#### [차이점]
 
-### \* 런타임 퍼포먼스(성능)
+#### \* 런타임 퍼포먼스(성능)
 
 - 랜더링 성능 - React 도 빠르지만, 실행환경 성능에서 Vue 의 속도가 React 를 앞섭니다.
 - 갱신 성능 - 컴포넌트의 상태가 변경되어 리 렌더링 시 Vue 는 자동으로 추적되므로 React 보다 빠릅니다.
 - 개발 환경 성능에서 Vue 가 React 에 비해 빠릅니다. 개발 환경 성능은 개발 생산성으로 연결됩니다.
 
-### \* 네이티브 렌더링
+#### \* 네이티브 렌더링
 
 - React 는 iOS 및 Android 용 기본 렌더링 어플리케이션을 작성할 수 있는 ReactNative 를 지원합니다.
 - Vue 쪽은 동일한 기능을 지원하는 Weex 를 개발 진행중입니다.
 
-## 2. Vue vs Angularjs (Angular 1)
+### 2. Vue vs Angularjs (Angular 1)
 
 - 일부 Vue 의 문법은 Angularjs와 매우 유사합니다.
 - Angularjs 는 scope 간에 양방향 바인딩을 사용하지만, Vue 는 컴포넌트 간에 단방향의 데이터 흐름을 사용합니다.
 - Angularjs 에 비해 Vue 의 성능이 더 좋습니다. Angularjs 는 watch 와 같은 감시자가 많을 경우 느려집니다.
 
-## 3. Vue vs Angular (Angular 2)
+### 3. Vue vs Angular (Angular 2)
 
 - Angular 2 는 TypeScript 가 필수입니다. TypeScript 는 기존에 Java나 C# 개발자에게 생산성을 올려주는 이점이 있지만, 소규모 개발에서는 용이하지 않습니다.
 - Angular 2, Vue 는 성능적인 측면에서 둘 다 매우 빠르며, 차지하는 용량도 작습니다.
