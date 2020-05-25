@@ -1,0 +1,190 @@
+# Component Basic
+
+<https://kr.vuejs.org/v2/guide/components.html>
+
+## 컴포넌트는 무엇인가요
+
+> 컴포넌트는 Vue의 가장 강력한 기능 중 하나입니다. 기본 HTML 엘리먼트를 확장하여 재사용 가능한 코드를 캡슐화하는 데 도움이 됩니다.  
+> 상위 수준에서 컴포넌트는 Vue의 컴파일러에 의해 동작이 추가된 사용자 지정 엘리먼트입니다.
+
+## 컴포넌트 사용하기
+
+### # 전역 등록
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <my-component></my-component>
+</div>
+```
+
+```javascript
+Vue.component('my-component', {
+  // 옵션
+  template: '<div>사용자 정의 컴포넌트 입니다!</div>',
+});
+
+// 루트 인스턴스 생성
+new Vue({
+  el: '#app',
+});
+```
+
+### # 지역 등록
+
+> 컴포넌트를 components 인스턴스 옵션으로 등록함으로써 상위 템플릿에서만 사용할 수 있는 컴포넌트를 만들 수 있습니다:
+
+```javascript
+var Child = {
+  template: '<div>사용자 정의 컴포넌트 입니다!</div>',
+};
+new Vue({
+  el: '#app',
+  components: {
+    // <my-component> 는 상위 템플릿에서만 사용할 수 있습니다.
+    'my-component': Child,
+  },
+});
+```
+
+### # Component data 는 반드시 함수여야합니다
+
+컴포넌트의 경우 data는 컴포넌트 인스턴스의 함수여야합니다.
+
+```html
+<div id="app">
+  <simple-counter></simple-counter>
+  <simple-counter></simple-counter>
+  <simple-counter></simple-counter>
+</div>
+```
+
+```javascript
+Vue.component('simple-counter', {
+  template: '<button v-on:click="counter += 1">{{ counter }}</button>',
+  // 데이터는 기술적으로 함수이므로 Vue는 따지지 않지만
+  // 각 컴포넌트 인스턴스에 대해 같은 객체 참조를 반환합니다.
+  data: function () {
+    return {
+      counter: 0,
+    };
+  },
+});
+
+new Vue({
+  el: '#app',
+});
+```
+
+## 컴포넌트 작성
+
+컴포넌트는 부모-자식 관계에서 가장 일반적으로 함께 사용하기 위한 것입니다.
+
+Vue.js에서 부모-자식 컴포넌트 관계는 props는 아래로, events 위로 라고 요약 할 수 있습니다. 부모는 props를 통해 자식에게 데이터를 전달하고 자식은 events를 통해 부모에게 메시지를 보냅니다.
+
+![ex_screenshot](https://kr.vuejs.org/images/props-events.png)
+
+## Props
+
+### # Props로 데이터 전달하기
+
+모든 컴포넌트 인스턴스에는 자체 격리 된 범위 가 있습니다. 즉, 하위 컴포넌트의 템플릿에서 상위 데이터를 직접 참조 할 수 없으며 그렇게 해서는 안됩니다. 데이터는 props 옵션 을 사용하여 하위 컴포넌트로 전달 될 수 있습니다.
+
+prop는 상위 컴포넌트의 정보를 전달하기위한 사용자 지정 특성입니다. 하위 컴포넌트는props 옵션을 사용하여 수신 할 것으로 기대되는 props를 명시적으로 선언해야합니다
+
+```html
+<child message="안녕하세요!"></child>
+```
+
+```javascript
+Vue.component('child', {
+  // props 정의
+  props: ['message'],
+  // 데이터와 마찬가지로 prop은 템플릿 내부에서 사용할 수 있으며
+  // vm의 this.message로 사용할 수 있습니다.
+  template: '<span>{{ message }}</span>',
+});
+
+new Vue({
+  el: '#app',
+});
+```
+
+### # camelCase vs. kebab-case
+
+HTML 속성은 대소 문자를 구분하지 않으므로 문자열이 아닌 템플릿을 사용할 때 camelCased prop 이름에 해당하는 kebab-case(하이픈 구분)를 사용해야 합니다.
+
+```html
+<!-- HTML는 kebab-case -->
+<child my-message="안녕하세요!"></child>
+```
+
+```javascript
+Vue.component('child', {
+  // JavaScript는 camelCase
+  props: ['myMessage'],
+  template: '<span>{{ myMessage }}</span>',
+});
+```
+
+### # 동적 Props
+
+v-bind를 사용하여 부모의 데이터에 props를 동적으로 바인딩 할 수 있습니다.
+데이터가 상위에서 업데이트 될 때마다 하위 데이터로도 전달됩니다.
+
+```html
+<div id="app">
+  <input v-model="parentMsg" />
+  <br />
+  <child v-bind:my-message="parentMsg"></child>
+</div>
+```
+
+```javascript
+Vue.component('child', {
+  // props 정의
+  props: ['myMessage'],
+  // 데이터와 마찬가지로 prop은 템플릿 내부에서 사용할 수 있으며
+  // vm의 this.message로 사용할 수 있습니다.
+  template: '<span>{{ myMessage }}</span>',
+});
+
+new Vue({
+  el: '#app',
+  data: {
+    parentMsg: '',
+  },
+});
+```
+
+객체의 모든 속성을 props로 전달하려면, 인자없이 v-bind를 쓸 수 있습니다. (v-bind:prop-name 대신 v-bind).  
+원래는 v-bind:text, v-bind:is-complete 형태로 하나씩 속성을 넘겨야 하나,
+Vue 는 Object 자체를 전달할 수 있도록 Simple 하게 지원을 합니다.
+이런 방식은 실제 개발에서 생산성과 편리함을 제공합니다.
+
+```html
+<todo-item v-bind="todo"></todo-item>
+
+<todo-item
+  v-bind:text="todo.text"
+  v-bind:is-complete="todo.isComplete"
+></todo-item>
+```
+
+```javascript
+Vue.component('todo-item', {
+  props: ['text', 'isComplete'],
+  template: '<p>{{ text }}, {{ isComplete }}</p>',
+});
+
+new Vue({
+  el: '#app',
+  data: {
+    todo: {
+      text: 'Learn Vue',
+      isComplete: false,
+    },
+  },
+});
+```

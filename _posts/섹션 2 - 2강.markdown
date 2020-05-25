@@ -1,0 +1,145 @@
+# 조건문과 반복문
+
+<https://kr.vuejs.org/v2/guide/index.html#%EC%A1%B0%EA%B1%B4%EB%AC%B8%EA%B3%BC-%EB%B0%98%EB%B3%B5%EB%AC%B8>
+
+엘리먼트가 표시되는지에 대한 여부를 제어
+
+```html
+<div id="app">
+  <p v-if="seen">이제 나를 볼 수 있어요</p>
+</div>
+```
+
+```javascript
+new Vue({
+  el: '#app',
+  data: {
+    seen: true,
+  },
+});
+```
+
+```html
+<div id="app">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+```
+
+```javascript
+new Vue({
+  el: '#app',
+  data: {
+    todos: [
+      { text: 'JavaScript 배우기' },
+      { text: 'Vue 배우기' },
+      { text: '무언가 멋진 것을 만들기' },
+    ],
+  },
+});
+```
+
+버튼을 하나 추가하고,
+Todo 를 추가하는 메소드를 만들어서 확인해 봅시다.
+{ text: 'New item' }를 추가힙니다.  
+Todo 목록에 새 항목이 동적으로 추가 된것을 볼 수 있습니다.
+
+```html
+<div id="app">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+  <button v-on:click="addTodo">추가</button>
+</div>
+```
+
+```javascript
+new Vue({
+  el: '#app',
+  data: {
+    todos: [
+      { text: 'JavaScript 배우기' },
+      { text: 'Vue 배우기' },
+      { text: '무언가 멋진 것을 만들기' },
+    ],
+  },
+  methods: {
+    addTodo: function () {
+      this.todos.push({ text: 'New item' });
+    },
+  },
+});
+```
+
+## 사용자 입력 핸들링
+
+<https://kr.vuejs.org/v2/guide/index.html#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%9E%85%EB%A0%A5-%ED%95%B8%EB%93%A4%EB%A7%81>
+
+```html
+<div id="app-6">
+  <p>{{ message }}</p>
+  <input v-model="message" />
+</div>
+```
+
+```javascript
+new Vue({
+  el: '#app-6',
+  data: {
+    message: '안녕하세요 Vue!',
+  },
+});
+```
+
+## 컴포넌트를 사용한 작성방법
+
+<https://kr.vuejs.org/v2/guide/index.html#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%EC%9E%91%EC%84%B1%EB%B0%A9%EB%B2%95>
+
+컴포넌트 시스템은 Vue의 또 다른 중요한 개념입니다.  
+이는 작고 독립적이며 재사용할 수 있는 컴포넌트로 구성된 대규모 애플리케이션을 구축할 수 있게 해주는 추상적 개념입니다.  
+생각해보면 거의 모든 유형의 애플리케이션 인터페이스를 컴포넌트 트리로 추상화할 수 있습니다.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+  <!-- 컴포넌트를 사용한 작성방법 -->
+  <ol>
+    <todo-item v-for="todo in todos" v-bind:todo="todo" v-bind:key="todo.id">
+    </todo-item>
+  </ol>
+</div>
+```
+
+Vue에서 컴포넌트는 미리 정의된 옵션을 가진 Vue 인스턴스 입니다.  
+Vue에서 컴포넌트를 등록하는 방법은 간단합니다.
+
+```javascript
+// 컴포넌트를 사용한 작성방법
+Vue.component('todo-item', {
+  //template: '<li>할일 항목 하나입니다.</lie>'
+  props: ['todo'],
+  template: '<li>{{ todo.text }}</li>',
+});
+
+new Vue({
+  el: '#app',
+  data: {
+    todos: [
+      { id: 0, text: 'Javascript 배우기' },
+      { id: 1, text: 'Vue 배우기' },
+      { id: 2, text: '무언가 멋진 것을 만들기' },
+    ],
+  },
+});
+```

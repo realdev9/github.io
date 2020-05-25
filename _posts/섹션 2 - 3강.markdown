@@ -1,0 +1,53 @@
+# SFC (Single File Components) 는 무엇인가
+
+<https://kr.vuejs.org/v2/guide/single-file-components.html>
+
+Vue.component 를 이용한 코딩 - 앞에 Vue js 맛보기 코딩에서 보여준 형태는
+중소 규모 프로젝트에서 유용함. 좀 더 복잡한 프로젝트의 경우 단점이 있습니다.
+
+## html 페이지내 Script 코딩 방식의 단점
+
+- 전역정의(Global definitions) - 모든 컴포넌트에 대한 고유한 이름 필요
+- 문자열 템플릿(String templates) - 구문 강조가 약함, 여러 줄로 된 HTML에 보기 안좋은 슬래시가 많이 필요함
+- CSS 지원 없음(No CSS support) - HTML 및 JavaScript가 컴포넌트로 모듈화 되어 있으나 CSS가 빠져있음
+- 빌드 단계 없음(No build step) – 전처리기가 아닌 HTML. ES5 JavaScript로 제한됨
+
+### Single File Components , SFC - .vue 확장자를 가진 싱글 파일 컴포넌트
+
+### 위 단점을 해결한 SFC 의 특징
+
+- 완벽한 구문 강조(Complete syntax highlighting) - Atom, Sublime Text, Visual Studio Code, Intellij  
+  Jade, Babel (ES2015 모듈을 포함합니다), Stylus와 같은 전처리기를 사용해 더 깨끗하고 기능이 풍부한 컴포넌트를 사용할 수 있습니다.
+
+- CommonJS 모듈(modules) – ES2015(ES6), CommonJS(ServerJS) 를 완벽히 지원  
+  CommonJS는 웹 브라우저 밖의 자바스크립트를 위한 모듈 생태계의 규칙을 설립하기 위한 프로젝트이다.  
+  <https://ko.wikipedia.org/wiki/CommonJS>
+
+- 컴포넌트에만 제한된 CSS(Component-scoped CSS) – Scoped CSS
+
+## 실제 SFC 로 개발된 Example
+
+### Example Sandbox
+
+- Simple To Do App - <https://codesandbox.io/s/o29j95wx9>
+
+- index.html
+- index.js
+- App.vue
+- variables.scss
+
+SCSS는 SASS 세번째 버전에서 추가되었는데 SASS의 모든 기능을 지원하면서 CSS 구문과 완전히 호환되도록 만들어졌다.
+
+- TodoList.vue
+- TodoListItem.vue
+- BaseInputText.vue
+
+### NPM
+
+- <https://docs.npmjs.com/>
+- <https://ko.wikipedia.org/wiki/Npm_(%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4)>
+
+### ES6
+
+- <https://babeljs.io/docs/en/learn>
+- <https://www.w3schools.com/js/js_es6.asp>

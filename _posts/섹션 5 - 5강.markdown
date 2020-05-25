@@ -1,0 +1,108 @@
+# Vue Router 기본
+
+<https://router.vuejs.org/kr/>
+
+> Vue 라우터는 Vue.js의 공식 라우터입니다. Vue.js를 사용한 싱글 페이지 앱을 쉽게 만들 수 있도록 Vue.js의 코어와 긴밀히 통합되어 있습니다.
+
+- 동적 라우트 매칭
+- 중첩된 라우트
+- 프로그래밍 방식 네비게이션
+- 이름을 가지는 라우트
+- 이름을 가지는 뷰
+- 리다이렉트와 별칭
+- 라우트 컴포넌트에 속성 전달
+- HTML5 히스토리 모드 또는 해시 모드(IE9에서 자동으로 폴백)
+- 사용자 정의 가능한 스크롤 동작
+
+등을 포함합니다. 위 기능에 대해서는 2부에서 자세히 다루도록 하겠습니다.
+지금은 Vue Router 에 대해 기본적인 이해에 집중하겠습니다.
+
+## Vue Router 설치
+
+<https://router.vuejs.org/kr/installation.html>
+
+## Vue Router 시작하기
+
+<https://router.vuejs.org/kr/guide/#html>
+
+[Example]
+<https://jsfiddle.net/yyx990803/xgrjzsup/>
+
+![ex_screenshot](https://k.kakaocdn.net/dn/bnqOks/btqEli2so5U/kFZ4NP7jF7NrpcXVjCiGkk/img.png)
+
+### HTML
+
+```html
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<div id="app">
+  <h1>Hello App!</h1>
+  <p>
+    <!-- 네비게이션을 위해 router-link 컴포넌트를 사용합니다. -->
+    <!-- 구체적인 속성은 `to` prop을 이용합니다. -->
+    <!-- 기본적으로 `<router-link>`는 `<a>` 태그로 렌더링됩니다.-->
+    <router-link to="/foo">Go to Foo</router-link>
+    <router-link to="/bar">Go to Bar</router-link>
+  </p>
+  <!-- 라우트 아울렛 -->
+  <!-- 현재 라우트에 맞는 컴포넌트가 렌더링됩니다. -->
+  <router-view></router-view>
+</div>
+```
+
+### JavaSscript
+
+```javascript
+// 0. 모듈 시스템 (예: vue-cli)을 이용하고 있다면, Vue와 Vue 라우터를 import 하세요
+// 그리고 `Vue.use(VueRouter)`를 호출하세요
+
+// 1. 라우트 컴포넌트를 정의하세요.
+// 아래 내용들은 다른 파일로부터 가져올 수 있습니다.
+const Foo = { template: '<div>foo</div>' };
+const Bar = { template: '<div>bar</div>' };
+
+// 2. 라우트를 정의하세요.
+// Each route should map to a component. The "component" can
+// 각 라우트는 반드시 컴포넌트와 매핑되어야 합니다.
+// "component"는 `Vue.extend()`를 통해 만들어진
+// 실제 컴포넌트 생성자이거나 컴포넌트 옵션 객체입니다.
+const routes = [
+  { path: '/foo', component: Foo },
+  { path: '/bar', component: Bar },
+];
+
+// 3. `routes` 옵션과 함께 router 인스턴스를 만드세요.
+// 추가 옵션을 여기서 전달해야합니다.
+// 지금은 간단하게 유지하겠습니다.
+const router = new VueRouter({
+  routes, // `routes: routes`의 줄임
+});
+
+// 4. 루트 인스턴스를 만들고 mount 하세요.
+// router와 router 옵션을 전체 앱에 주입합니다.
+const app = new Vue({
+  router,
+}).$mount('#app');
+
+// 이제 앱이 시작됩니다!
+```
+
+라우터를 주입하였으므로 this.$router와 현재 라우트를 this.$route로 접근할 수 있습니다.
+
+```javascript
+// Home.vue
+export default {
+  computed: {
+    username() {
+      // 곧 `params` 확인할 수 있습니다.
+      return this.$route.params.username;
+    },
+  },
+  methods: {
+    goBack() {
+      window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/');
+    },
+  },
+};
+```

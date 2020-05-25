@@ -1,0 +1,115 @@
+# 컴포넌트에서 v-model, listeners - My To Do App 다시보기
+
+<https://codesandbox.io/s/o29j95wx9>
+
+- index.html - div id="app"
+- index.js - el: '#app' , components: { App }, template: '\<App/>'
+- App.vue - 매우 심플하게 My Todo App! 이라는 어플리케이션의 제목을 가지고 있습니다. 그리고
+  component 로 TodoList.vue 를 가지고 있습니다.
+- variables.scss - $vue-blue 와 $vue-green 이 정의되어 있습니다.
+
+SCSS는 SASS(<https://ko.wikipedia.org/wiki/Sass_(%EC%8A%A4%ED%83%80%EC%9D%BC%EC%8B%9C%ED%8A%B8_%EC%96%B8%EC%96%B4)>)
+세번째 버전에서 추가되엇습니다. SASS의 모든 기능을 지원하면서 CSS 구문과 완전히 호환되도록 만들어졌습니다. 기존 CSS에 변수, 네스팅, mixin, 셀렉터 상속 같은 매커니즘을 제공합니다.
+
+variables.scss 와 같이 공통 SCSS 를 변수로 활용하고자 할때 이런식으로 import 하여 진행할 수 있음
+
+- TodoList.vue - BaseInputText, TodoListItem 두개의 컴포넌트를 활용하고 있습니다.
+  여기서 보면 우리가 5-2강 v-for와 컴포넌트에서 공부한 것 처럼, TodoListItem 은 v-for 를 통해 todo를 TodoListItem 컴포넌트 외부에서 주입받고 있습니다.
+- TodoListItem.vue - todo.text 를 보여주고, \$emit 을 통해서, @remove 의 removeTodo 를 호출할 수 있게 됩니다. removeTodo 는 삭제할 idToRemove 를 가지고 원본 todos 에서 해당 todo 를 걸러줍니다.
+- BaseInputText.vue - 컴포넌트에서 v-model 을 통해 자세하게 공부해보겠습니다.
+
+## 컴포넌트에서 v-model
+
+<https://vuejs.org/v2/guide/components.html#Using-v-model-on-Components>
+
+```html
+<input v-model="searchText" />
+```
+
+위 문장은 아래와 같습니다.
+
+```html
+<input
+  v-bind:value="searchText"
+  v-on:input="searchText = $event.target.value"
+/>
+```
+
+```html
+<input type="text" class="input" :value="value" v-on="listeners" />
+```
+
+컴포넌트에서는 v-model 을 쓸 수 없고 v-bind:value 와 v-on 을 이용해서 코딩을 해야 합니다.
+
+<https://kr.vuejs.org/v2/guide/components.html#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%A0%95%EC%9D%98-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%ED%8F%BC-%EC%9E%85%EB%A0%A5-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0>
+
+$event.target.value 에서 $event 는
+
+<https://www.w3schools.com/jsref/obj_event.asp>
+
+MouseEvent and KeyboardEvent 같은 모든 event objects
+
+target 은 이벤트를 트리거 한 요소를 반환(Returns the element that triggered the event) 합니다.
+
+사용자가 입력시 something 에 \$event.target.value 를 념겨준다.
+
+좀 더 자세한 내용은 가이드 문서를 참고하시면 되겠습니다.
+
+```html
+<BaseInputText
+  v-model="newTodoText"
+  placeholder="New todo"
+  @keydown.enter="addTodo"
+/>
+```
+
+@keydown.enter 는 v-on:keydown.enter 입니다.
+1부 기본강좌의 이벤트 핸들링 부분에서 공부를 했었습니다.
+그래서, enter 키를 누르면, addTodo 메소드가 실행이 됩니다.
+
+추가로 v-on="listeners" 에 대한 참고 할만한 설명은
+
+공식 가이드 문서의 네이티브 이벤트를 컴포넌트에 바인딩 하기에서 하고 있습니다.
+
+<https://kr.vuejs.org/v2/guide/components-custom-events.html#%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%9D%B4%EB%B2%A4%ED%8A%B8%EB%A5%BC-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%97%90-%EB%B0%94%EC%9D%B8%EB%94%A9-%ED%95%98%EA%B8%B0>
+
+한번 읽어보십면 Component 개발을 하는데 도움이 될 수 있을 것 입니다.
+
+```javascript
+computed: {
+    listeners() {
+      return {
+        // 우선 부모 엘리먼트의 모든 리스너를 추가합니다.
+        // ... Spread syntax
+        ...this.$listeners,
+        // 아래 구문을 사용하면 v-model과 같이 동작하도록 만들 수 있습니다.
+        input: event => this.$emit("input", event.target.value)
+      }
+    }
+  }
+```
+
+event => this.\$emit("input", event.target.value) arrow 함수를
+es5 형태로 다시 풀어쓰면
+
+```javascript
+computed: {
+    listeners() {
+      var vm = this;
+        // `Object.assign` 는 오브젝트를 새로운 오브젝트로 병합합니다.
+      return Object.assign({},
+        // 우선 부모 엘리먼트의 모든 리스너를 추가합니다.
+        // ... Spread syntax
+        this.$listeners,
+        // 아래 구문을 사용하면 v-model과 같이 동작하도록 만들 수 있습니다.
+        {
+          input: function(event) {
+            vm.$emit("input", event.target.value);
+          }
+        }
+      )
+    }
+  }
+```
+
+때로는 Object.assign()이나 \_.extend()를 사용해 기존의 객체에 새 속성을 할당할 수 있습니다. 이 경우 두 객체의 속성을 사용해 새 객체를 만들어야 합니다.
