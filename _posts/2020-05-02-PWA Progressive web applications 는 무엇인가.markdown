@@ -1,3 +1,9 @@
+---
+layout: post
+title: PWA (Progressive web applications) 는 무엇인가
+tags: vue.js, vue, vuejs
+---
+
 # PWA (Progressive Web Application)
 
 이번 시간에는 앞에서 나온 웹개발의 중요한 개념인 PWA 와 SPA 에 대해서 자세히 알아보도록 하겠습니다.
