@@ -1,3 +1,9 @@
+---
+layout: post
+title: Vue.js가 무엇인가
+tags: vue.js, vue, vuejs
+---
+
 # 섹션 1 : Vue 관련 개념 정리
 
 지금부터는 Vue 에 대해 본격적인 공부에 앞서 Vue 와 관련된 개념을 이해하고, 다른 프레임웍과 비교하는 시간을 가지겠습니다.
