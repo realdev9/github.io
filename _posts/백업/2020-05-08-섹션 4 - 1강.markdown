@@ -135,7 +135,6 @@ new Vue({
 {{ var a = 1 }}
 
 <!-- 조건문은 작동하지 않습니다. 삼항 연산자를 사용해야 합니다. -->
-<!-- {{ if (ok) { return message } }} -->
 {{ ok ? message }}
 ```
 
