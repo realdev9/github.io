@@ -1,562 +1,83 @@
-<h2 data-ke-size="size26">Vue.js 가 무엇인가?</h2>
-<p>&nbsp;</p>
-<p>
-  <span><span>●&nbsp; </span></span><span>Vue</span><span>는 사용자 </span
-  ><span>인터페이스를 만들기 위한&nbsp;</span><span>프로그레시브</span
-  ><span> </span><span>프레임워크</span><span>(</span><span>Progressive </span
-  ><span>Framework) </span>
-</p>
-<p>
-  <span><span>&nbsp;</span></span
-  ><span><span> &nbsp; </span></span><span>&rarr;</span><span> </span
-  ><span>일반적인 웹 페이지 뿐만 아니라 </span><span>PWA(</span
-  ><span>프로그레시브</span><span> </span><span><span>&nbsp;</span></span
-  ><span>웹앱</span><span>)</span><span> </span><span>개발</span><span>에</span
-  ><span> </span><span>용이하다</span>
-</p>
-<p>
-  <span><span>●&nbsp; </span></span><span>점진적으로 </span
-  ><span>채택할 수 있도록 </span><span>설계됨</span>
-</p>
-<p>
-  <span
-    ><span><span>&nbsp;</span></span
-    ><span><span> &nbsp; </span></span
-    ><span><a href="https://vuejs.org/index.html">vue</a></span
-    ><span> </span><span>-&gt; </span
-    ><span><a href="https://router.vuejs.org/">vue</a></span
-    ><span><a href="https://router.vuejs.org/"> router</a></span
-    ><span> -&gt; </span
-    ><span><a href="https://vuex.vuejs.org/">vuex</a></span></span
-  >
-</p>
-<figure
-  id="og_1581924356110"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="article"
-  data-og-title="Vue.js"
-  data-og-description="Vue.js - The Progressive JavaScript Framework"
-  data-og-host="vuejs.org"
-  data-og-source-url="https://vuejs.org/index.html"
-  data-og-url="https://vuejs.org/index.html"
-  data-og-image="https://scrap.kakaocdn.net/dn/dKO4nT/hyEYpSX2pk/hKubj7vAws4x1rQqIZTIck/img.png?width=400&amp;height=400&amp;face=0_0_400_400,https://scrap.kakaocdn.net/dn/ZjBiS/hyEYpek7p5/ExKUBb5KMJCKQfw2bFrVZ1/img.png?width=400&amp;height=400&amp;face=0_0_400_400,https://scrap.kakaocdn.net/dn/AKbLE/hyEYkRE0xV/WOPfymC1nEnJUvWniGjzNk/img.png?width=400&amp;height=400&amp;face=0_0_400_400"
->
-  <a
-    href="https://vuejs.org/index.html"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://vuejs.org/index.html"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/dKO4nT/hyEYpSX2pk/hKubj7vAws4x1rQqIZTIck/img.png?width=400&amp;height=400&amp;face=0_0_400_400,https://scrap.kakaocdn.net/dn/ZjBiS/hyEYpek7p5/ExKUBb5KMJCKQfw2bFrVZ1/img.png?width=400&amp;height=400&amp;face=0_0_400_400,https://scrap.kakaocdn.net/dn/AKbLE/hyEYkRE0xV/WOPfymC1nEnJUvWniGjzNk/img.png?width=400&amp;height=400&amp;face=0_0_400_400');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">Vue.js</p>
-      <p class="og-desc">Vue.js - The Progressive JavaScript Framework</p>
-      <p class="og-host">vuejs.org</p>
-    </div>
-  </a>
-</figure>
-<figure
-  id="og_1581924346163"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="website"
-  data-og-title="Introduction | Vue Router"
-  data-og-description="Introduction VERSION NOTE For TypeScript users, vue-router@3.0+ requires vue@2.5+, and vice versa. Vue Router is the official router for Vue.js . It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze. Features"
-  data-og-host="router.vuejs.org"
-  data-og-source-url="https://router.vuejs.org/"
-  data-og-url="https://router.vuejs.org/"
-  data-og-image=""
->
-  <a
-    href="https://router.vuejs.org/"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://router.vuejs.org/"
-  >
-    <div class="og-image" style="background-image: url();">&nbsp;</div>
-    <div class="og-text">
-      <p class="og-title">Introduction | Vue Router</p>
-      <p class="og-desc">
-        Introduction VERSION NOTE For TypeScript users, vue-router@3.0+ requires
-        vue@2.5+, and vice versa. Vue Router is the official router for Vue.js .
-        It deeply integrates with Vue.js core to make building Single Page
-        Applications with Vue.js a breeze. Features
-      </p>
-      <p class="og-host">router.vuejs.org</p>
-    </div>
-  </a>
-</figure>
-<figure
-  id="og_1581924332039"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="website"
-  data-og-title="What is Vuex? | Vuex"
-  data-og-description="What is Vuex? Vuex is a state management pattern + library for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion. It also integrat"
-  data-og-host="vuex.vuejs.org"
-  data-og-source-url="https://vuex.vuejs.org/"
-  data-og-url="https://vuex.vuejs.org/"
-  data-og-image="https://scrap.kakaocdn.net/dn/KInBi/hyEYtOCeKT/0rw2KET7IlKgyNszsvubbK/img.png?width=1280&amp;height=866&amp;face=0_0_1280_866,https://scrap.kakaocdn.net/dn/MTJwV/hyEYnt4LdZ/3AOkMkeAkgc1FOq42rXL8K/img.png?width=701&amp;height=551&amp;face=0_0_701_551,https://scrap.kakaocdn.net/dn/bfIY8h/hyEYsoCBpq/3o8usi9IfNekRbRgulZupK/img.png?width=640&amp;height=360&amp;face=0_0_640_360"
->
-  <a
-    href="https://vuex.vuejs.org/"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://vuex.vuejs.org/"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/KInBi/hyEYtOCeKT/0rw2KET7IlKgyNszsvubbK/img.png?width=1280&amp;height=866&amp;face=0_0_1280_866,https://scrap.kakaocdn.net/dn/MTJwV/hyEYnt4LdZ/3AOkMkeAkgc1FOq42rXL8K/img.png?width=701&amp;height=551&amp;face=0_0_701_551,https://scrap.kakaocdn.net/dn/bfIY8h/hyEYsoCBpq/3o8usi9IfNekRbRgulZupK/img.png?width=640&amp;height=360&amp;face=0_0_640_360');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">What is Vuex? | Vuex</p>
-      <p class="og-desc">
-        What is Vuex? Vuex is a state management pattern + library for Vue.js
-        applications. It serves as a centralized store for all the components in
-        an application, with rules ensuring that the state can only be mutated
-        in a predictable fashion. It also integrat
-      </p>
-      <p class="og-host">vuex.vuejs.org</p>
-    </div>
-  </a>
-</figure>
-<p>
-  <span><span>● </span></span
-  ><span
-    ><a href="https://kr.vuejs.org/v2/guide/single-file-components.html"
-      >싱글</a
-    ></span
-  ><span
-    ><a href="https://kr.vuejs.org/v2/guide/single-file-components.html">
-      파일 컴포넌트</a
-    ></span
-  ><span>(</span
-  ><span
-    ><a href="https://vueschool.io/courses/vuejs-single-file-components"
-      >Single File
-    </a></span
-  ><span
-    ><a href="https://vueschool.io/courses/vuejs-single-file-components"
-      >Components</a
-    ></span
-  ><span>, SFC)</span><span> </span><span>&ndash; </span><span>.</span
-  ><span>vue</span><span>&nbsp;</span><span>확장자를</span
-  ><span> 가진&nbsp;</span><span>싱글</span><span> 파일 </span
-  ><span>컴포넌트</span>
-</p>
-<figure
-  id="og_1581924393352"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="website"
-  data-og-title="Learn Single File Components in this Vue.js Course"
-  data-og-description="Embrace the full power of Vue CLI 3, Pre-Processors and Vue.js Single File Components."
-  data-og-host="vueschool.io"
-  data-og-source-url="https://vueschool.io/courses/vuejs-single-file-components"
-  data-og-url="https://vueschool.io/courses/vuejs-single-file-components"
-  data-og-image="https://scrap.kakaocdn.net/dn/0Zw2c/hyEYhgllXs/YvOBxbNYUGBNZjb77LQ5A0/img.jpg?width=1024&amp;height=512&amp;face=0_0_1024_512,https://scrap.kakaocdn.net/dn/dkbwgS/hyEYufGQcg/lkO1zNsYLJU63KEqcQewC0/img.jpg?width=1024&amp;height=512&amp;face=0_0_1024_512,https://scrap.kakaocdn.net/dn/bJGGcN/hyEYvlmpQb/OJflpqDiqekyYvQFKg40lK/img.jpg?width=960&amp;height=1053&amp;face=273_333_606_698"
->
-  <a
-    href="https://vueschool.io/courses/vuejs-single-file-components"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://vueschool.io/courses/vuejs-single-file-components"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/0Zw2c/hyEYhgllXs/YvOBxbNYUGBNZjb77LQ5A0/img.jpg?width=1024&amp;height=512&amp;face=0_0_1024_512,https://scrap.kakaocdn.net/dn/dkbwgS/hyEYufGQcg/lkO1zNsYLJU63KEqcQewC0/img.jpg?width=1024&amp;height=512&amp;face=0_0_1024_512,https://scrap.kakaocdn.net/dn/bJGGcN/hyEYvlmpQb/OJflpqDiqekyYvQFKg40lK/img.jpg?width=960&amp;height=1053&amp;face=273_333_606_698');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">Learn Single File Components in this Vue.js Course</p>
-      <p class="og-desc">
-        Embrace the full power of Vue CLI 3, Pre-Processors and Vue.js Single
-        File Components.
-      </p>
-      <p class="og-host">vueschool.io</p>
-    </div>
-  </a>
-</figure>
-<p>
-  <span><span>● </span></span
-  ><span><a href="https://github.com/vuejs/awesome-vue">Awesome </a></span
-  ><span><a href="https://github.com/vuejs/awesome-vue">Vue.js</a></span
-  ><span> - Vue.js</span><span>와 관련된 </span><span>선별 </span
-  ><span>된 </span><span>Awesome </span><span>한 목록</span>
-</p>
-<figure
-  id="og_1581924447266"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="object"
-  data-og-title="vuejs/awesome-vue"
-  data-og-description="🎉 A curated list of awesome things related to Vue.js - vuejs/awesome-vue"
-  data-og-host="github.com"
-  data-og-source-url="https://github.com/vuejs/awesome-vue"
-  data-og-url="https://github.com/vuejs/awesome-vue"
-  data-og-image="https://scrap.kakaocdn.net/dn/bsnKz2/hyEYqdgmro/6kVk1dd2KrKtk5cdKBU4RK/img.png?width=200&amp;height=200&amp;face=0_0_200_200"
->
-  <a
-    href="https://github.com/vuejs/awesome-vue"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://github.com/vuejs/awesome-vue"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/bsnKz2/hyEYqdgmro/6kVk1dd2KrKtk5cdKBU4RK/img.png?width=200&amp;height=200&amp;face=0_0_200_200');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">vuejs/awesome-vue</p>
-      <p class="og-desc">
-        🎉 A curated list of awesome things related to Vue.js -
-        vuejs/awesome-vue
-      </p>
-      <p class="og-host">github.com</p>
-    </div>
-  </a>
-</figure>
-<p>&nbsp;</p>
-<p>
-  <span><span>● &nbsp;</span></span
-  ><span
-    ><a href="https://github.com/vuejs/awesome-vue"
-      >지원하는 라이브러리</a
-    ></span
-  ><span> - </span
-  ><span
-    >Table, Notification(modeless little Popup), Loader(spinners), Tooltip,
-    Overlay(modal popup), Icons(</span
-  ><span
-    ><a href="https://gitlab.com/robcresswell/vue-material-design-icons"
-      >vue</a
-    ></span
-  ><span
-    ><a href="https://gitlab.com/robcresswell/vue-material-design-icons"
-      >-material-design-icons
-    </a></span
-  ><span>or </span
-  ><span
-    ><a href="https://github.com/google/material-design-icons"
-      >material-design-icons</a
-    ></span
-  ><span>), Menu(</span
-  ><span><a href="https://github.com/zeratulmdq/vue-accordion">vue</a></span
-  ><span
-    ><a href="https://github.com/zeratulmdq/vue-accordion">-accordion</a></span
-  ><span>) &hellip;</span>
-</p>
-<figure
-  id="og_1581924575328"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="object"
-  data-og-title="Rob Cresswell / vue-material-design-icons"
-  data-og-description="_MOVED TO https://github.com/robcresswell/vue-material-design-icons_ A collection of material design icons as Vue single file components"
-  data-og-host="gitlab.com"
-  data-og-source-url="https://gitlab.com/robcresswell/vue-material-design-icons"
-  data-og-url="https://gitlab.com/robcresswell/vue-material-design-icons"
-  data-og-image="https://scrap.kakaocdn.net/dn/why7V/hyEYos0ie3/9kkXTupHzdDepcv3Sp6E9K/img.png?width=128&amp;height=128&amp;face=0_0_128_128,https://scrap.kakaocdn.net/dn/bmaqh0/hyEYs3euOq/vkYMozT76RVBjC3sTGunq1/img.png?width=128&amp;height=128&amp;face=0_0_128_128"
->
-  <a
-    href="https://gitlab.com/robcresswell/vue-material-design-icons"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://gitlab.com/robcresswell/vue-material-design-icons"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/why7V/hyEYos0ie3/9kkXTupHzdDepcv3Sp6E9K/img.png?width=128&amp;height=128&amp;face=0_0_128_128,https://scrap.kakaocdn.net/dn/bmaqh0/hyEYs3euOq/vkYMozT76RVBjC3sTGunq1/img.png?width=128&amp;height=128&amp;face=0_0_128_128');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">Rob Cresswell / vue-material-design-icons</p>
-      <p class="og-desc">
-        _MOVED TO https://github.com/robcresswell/vue-material-design-icons_ A
-        collection of material design icons as Vue single file components
-      </p>
-      <p class="og-host">gitlab.com</p>
-    </div>
-  </a>
-</figure>
-<figure
-  id="og_1581924572652"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="object"
-  data-og-title="google/material-design-icons"
-  data-og-description="Material Design icons by Google. Contribute to google/material-design-icons development by creating an account on GitHub."
-  data-og-host="github.com"
-  data-og-source-url="https://github.com/google/material-design-icons"
-  data-og-url="https://github.com/google/material-design-icons"
-  data-og-image="https://scrap.kakaocdn.net/dn/dmADeC/hyEYilZXFD/HIfaIFRuxhhWLKJb5wExz0/img.png?width=400&amp;height=400&amp;face=0_0_400_400"
->
-  <a
-    href="https://github.com/google/material-design-icons"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://github.com/google/material-design-icons"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/dmADeC/hyEYilZXFD/HIfaIFRuxhhWLKJb5wExz0/img.png?width=400&amp;height=400&amp;face=0_0_400_400');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">google/material-design-icons</p>
-      <p class="og-desc">
-        Material Design icons by Google. Contribute to
-        google/material-design-icons development by creating an account on
-        GitHub.
-      </p>
-      <p class="og-host">github.com</p>
-    </div>
-  </a>
-</figure>
-<figure
-  id="og_1581924569182"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="object"
-  data-og-title="zeratulmdq/vue-accordion"
-  data-og-description="Simple accordion menu component for Vue.js. Contribute to zeratulmdq/vue-accordion development by creating an account on GitHub."
-  data-og-host="github.com"
-  data-og-source-url="https://github.com/zeratulmdq/vue-accordion"
-  data-og-url="https://github.com/zeratulmdq/vue-accordion"
-  data-og-image="https://scrap.kakaocdn.net/dn/mpaP6/hyEYqdgAlO/aj3rGJkDxp3Bd3BeTixxwK/img.jpg?width=400&amp;height=400&amp;face=0_0_400_400"
->
-  <a
-    href="https://github.com/zeratulmdq/vue-accordion"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://github.com/zeratulmdq/vue-accordion"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/mpaP6/hyEYqdgAlO/aj3rGJkDxp3Bd3BeTixxwK/img.jpg?width=400&amp;height=400&amp;face=0_0_400_400');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">zeratulmdq/vue-accordion</p>
-      <p class="og-desc">
-        Simple accordion menu component for Vue.js. Contribute to
-        zeratulmdq/vue-accordion development by creating an account on GitHub.
-      </p>
-      <p class="og-host">github.com</p>
-    </div>
-  </a>
-</figure>
-<p>
-  <span
-    ><span
-      >●
-      <span
-        ><a
-          href="https://ko.wikipedia.org/wiki/%EC%8B%B1%EA%B8%80_%ED%8E%98%EC%9D%B4%EC%A7%80_%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98"
-          >단일 페이지 응용 프로그램</a
-        ></span
-      ><span
-        ><a
-          href="https://ko.wikipedia.org/wiki/%EC%8B%B1%EA%B8%80_%ED%8E%98%EC%9D%B4%EC%A7%80_%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98"
-          >(Single Page Application)</a
-        ></span
-      ></span
-    ></span
-  >
-</p>
-<figure
-  id="og_1581924628050"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="website"
-  data-og-title="싱글 페이지 애플리케이션 - 위키백과, 우리 모두의 백과사전"
-  data-og-description="위키백과, 우리 모두의 백과사전. 싱글 페이지 애플리케이션(single-page application, SPA, 스파)은 서버로부터 완전한 새로운 페이지를 불러오지 않고 현재의 페이지를 동적으로 다시 작성함으로써 사용자와 소통하는 웹 애플리케이션이나 웹사이트를 말한다. 이러한 접근은 연속되는 페이지들 간의 사용자 경험의 간섭을 막아주고 애플리케이션이 더 데스크톱 애플리케이션처럼 동작하도록 만들어준다. SPA에서 HTML, 자바스크립트, CSS 등 필요한 "
-  data-og-host="ko.wikipedia.org"
-  data-og-source-url="https://ko.wikipedia.org/wiki/%EC%8B%B1%EA%B8%80_%ED%8E%98%EC%9D%B4%EC%A7%80_%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98"
-  data-og-url="https://ko.wikipedia.org/wiki/%EC%8B%B1%EA%B8%80_%ED%8E%98%EC%9D%B4%EC%A7%80_%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98"
-  data-og-image=""
->
-  <a
-    href="https://ko.wikipedia.org/wiki/%EC%8B%B1%EA%B8%80_%ED%8E%98%EC%9D%B4%EC%A7%80_%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://ko.wikipedia.org/wiki/%EC%8B%B1%EA%B8%80_%ED%8E%98%EC%9D%B4%EC%A7%80_%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98"
-  >
-    <div class="og-image" style="background-image: url();">&nbsp;</div>
-    <div class="og-text">
-      <p class="og-title">
-        싱글 페이지 애플리케이션 - 위키백과, 우리 모두의 백과사전
-      </p>
-      <p class="og-desc">
-        위키백과, 우리 모두의 백과사전. 싱글 페이지 애플리케이션(single-page
-        application, SPA, 스파)은 서버로부터 완전한 새로운 페이지를 불러오지
-        않고 현재의 페이지를 동적으로 다시 작성함으로써 사용자와 소통하는 웹
-        애플리케이션이나 웹사이트를 말한다. 이러한 접근은 연속되는 페이지들 간의
-        사용자 경험의 간섭을 막아주고 애플리케이션이 더 데스크톱
-        애플리케이션처럼 동작하도록 만들어준다. SPA에서 HTML, 자바스크립트, CSS
-        등 필요한
-      </p>
-      <p class="og-host">ko.wikipedia.org</p>
-    </div>
-  </a>
-</figure>
-<p>&nbsp;</p>
-<p>
-  <span><span>●</span></span
-  ><span
-    ><a href="https://vuejs.org/v2/guide/comparison.html"
-      >Comparison with Other Frameworks</a
-    ></span
-  >
-</p>
-<figure
-  id="og_1581924656178"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="article"
-  data-og-title="Comparison with Other Frameworks &mdash; Vue.js"
-  data-og-description="Vue.js - The Progressive JavaScript Framework"
-  data-og-host="vuejs.org"
-  data-og-source-url="https://vuejs.org/v2/guide/comparison.html"
-  data-og-url="https://vuejs.org/v2/guide/comparison.html"
-  data-og-image="https://scrap.kakaocdn.net/dn/taPmi/hyEYtuiHrq/brEpfFPGL2eCSsV9V5LOH1/img.png?width=400&amp;height=400&amp;face=0_0_400_400,https://scrap.kakaocdn.net/dn/eQQfZ/hyEYpelu5y/rOPupxUdoUl68zkwZerjWk/img.png?width=400&amp;height=400&amp;face=0_0_400_400"
->
-  <a
-    href="https://vuejs.org/v2/guide/comparison.html"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://vuejs.org/v2/guide/comparison.html"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/taPmi/hyEYtuiHrq/brEpfFPGL2eCSsV9V5LOH1/img.png?width=400&amp;height=400&amp;face=0_0_400_400,https://scrap.kakaocdn.net/dn/eQQfZ/hyEYpelu5y/rOPupxUdoUl68zkwZerjWk/img.png?width=400&amp;height=400&amp;face=0_0_400_400');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">Comparison with Other Frameworks &mdash; Vue.js</p>
-      <p class="og-desc">Vue.js - The Progressive JavaScript Framework</p>
-      <p class="og-host">vuejs.org</p>
-    </div>
-  </a>
-</figure>
-<p>
-  <a href="https://bit.ly/2LMzjNC" target="_blank" rel="noopener"
-    >bit.ly/2LMzjNC</a
-  >
-</p>
-<figure
-  id="og_1590123361077"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="article"
-  data-og-title="[인프런 인강] 선착순 100명 50% 할인쿠폰! - [Vue.js] Real 웹앱 개발 - 1부 : vue 개념 ~ 핵심 문법"
-  data-og-description="인프런 인터넷 강의 선착순 100명 50% 할인쿠폰! [Vue.js] javascript Real 웹앱 개발 - 1부 : vue 개념 ~ 핵심 문법 쿠폰번호 : 678-ee6aa5185caa 사용법 : 결제시 쿠폰코드 등록을 통해 적용 기한 : 2020년 6월.."
-  data-og-host="plogger.tistory.com"
-  data-og-source-url="https://bit.ly/2LMzjNC"
-  data-og-url="https://plogger.tistory.com/entry/%EC%9D%B8%EA%B0%95-%EC%84%A0%EC%B0%A9%EC%88%9C-100%EB%AA%85-50-%ED%95%A0%EC%9D%B8%EC%BF%A0%ED%8F%B0-Vuejs-Real-%EC%9B%B9%EC%95%B1-%EA%B0%9C%EB%B0%9C-1%EB%B6%80-vue-%EA%B0%9C%EB%85%90-%ED%95%B5%EC%8B%AC-%EB%AC%B8%EB%B2%95"
-  data-og-image="https://scrap.kakaocdn.net/dn/dbKvBM/hyF8GstrTp/IOqDslrHW0K1O8D2SBUWd0/img.png?width=590&amp;height=412&amp;face=0_0_590_412,https://scrap.kakaocdn.net/dn/bCXvWe/hyF8QhxOHs/1XKwEtvJ54SrkQCLSyAKEK/img.png?width=590&amp;height=412&amp;face=0_0_590_412"
->
-  <a
-    href="https://bit.ly/2LMzjNC"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://bit.ly/2LMzjNC"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/dbKvBM/hyF8GstrTp/IOqDslrHW0K1O8D2SBUWd0/img.png?width=590&amp;height=412&amp;face=0_0_590_412,https://scrap.kakaocdn.net/dn/bCXvWe/hyF8QhxOHs/1XKwEtvJ54SrkQCLSyAKEK/img.png?width=590&amp;height=412&amp;face=0_0_590_412');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">
-        [인프런 인강] 선착순 100명 50% 할인쿠폰! - [Vue.js] Real 웹앱 개발 - 1부
-        : vue 개념 ~ 핵심 문법
-      </p>
-      <p class="og-desc">
-        인프런 인터넷 강의 선착순 100명 50% 할인쿠폰! [Vue.js] javascript Real
-        웹앱 개발 - 1부 : vue 개념 ~ 핵심 문법 쿠폰번호 : 678-ee6aa5185caa
-        사용법 : 결제시 쿠폰코드 등록을 통해 적용 기한 : 2020년 6월..
-      </p>
-      <p class="og-host">plogger.tistory.com</p>
-    </div>
-  </a>
-</figure>
-<p>
-  <a href="https://bit.ly/2TtRHis" target="_blank" rel="noopener"
-    >bit.ly/2TtRHis</a
-  >
-</p>
-<figure
-  id="og_1590123366400"
-  contenteditable="false"
-  data-ke-type="opengraph"
-  data-og-type="website"
-  data-og-title="[Vue.js] Javascript Real 웹앱 개발 - 1부 : vue 개념 ~ 핵심 문법 - 인프런"
-  data-og-description="이 강의를 수강하시면 Vue.js 와 관련된 기본적인 개념부터 Real 웹앱 개발을 해 볼 수 있습니다. 이 강의는 1부 기본기 이며, 2부와 3부를 통해서 실제 Real 웹앱을 구현해 보도록 하겠습니다. 초급 ��"
-  data-og-host="www.inflearn.com"
-  data-og-source-url="https://bit.ly/2TtRHis"
-  data-og-url="https://www.inflearn.com/course/real-%EC%9B%B9%EC%95%B1-%EA%B0%9C%EB%B0%9C-vuejs-1%EB%B6%80"
-  data-og-image="https://scrap.kakaocdn.net/dn/bhFYIQ/hyF8QPofAM/rtudjy9QUFYBjzEKSKYEj0/img.png?width=768&amp;height=500&amp;face=0_0_768_500,https://scrap.kakaocdn.net/dn/cEV3zv/hyF8DvJL5X/GsLzvkh1PRa0iB2mHmcq1k/img.png?width=768&amp;height=500&amp;face=0_0_768_500,https://scrap.kakaocdn.net/dn/jpJcM/hyF8QaMKUO/Ki8beZaAJmHzo8MEVrYyn1/img.png?width=1907&amp;height=927&amp;face=0_0_1907_927"
->
-  <a
-    href="https://bit.ly/2TtRHis"
-    target="_blank"
-    rel="noopener"
-    data-source-url="https://bit.ly/2TtRHis"
-  >
-    <div
-      class="og-image"
-      style="
-        background-image: url('https://scrap.kakaocdn.net/dn/bhFYIQ/hyF8QPofAM/rtudjy9QUFYBjzEKSKYEj0/img.png?width=768&amp;height=500&amp;face=0_0_768_500,https://scrap.kakaocdn.net/dn/cEV3zv/hyF8DvJL5X/GsLzvkh1PRa0iB2mHmcq1k/img.png?width=768&amp;height=500&amp;face=0_0_768_500,https://scrap.kakaocdn.net/dn/jpJcM/hyF8QaMKUO/Ki8beZaAJmHzo8MEVrYyn1/img.png?width=1907&amp;height=927&amp;face=0_0_1907_927');
-      "
-    >
-      &nbsp;
-    </div>
-    <div class="og-text">
-      <p class="og-title">
-        [Vue.js] Javascript Real 웹앱 개발 - 1부 : vue 개념 ~ 핵심 문법 - 인프런
-      </p>
-      <p class="og-desc">
-        이 강의를 수강하시면 Vue.js 와 관련된 기본적인 개념부터 Real 웹앱 개발을
-        해 볼 수 있습니다. 이 강의는 1부 기본기 이며, 2부와 3부를 통해서 실제
-        Real 웹앱을 구현해 보도록 하겠습니다. 초급 ��
-      </p>
-      <p class="og-host">www.inflearn.com</p>
-    </div>
-  </a>
-</figure>
-<p>&nbsp;</p>
+# 섹션 1 : Vue 관련 개념 정리
+
+지금부터는 Vue 에 대해 본격적인 공부에 앞서 Vue 와 관련된 개념을 이해하고, 다른 프레임웍과 비교하는 시간을 가지겠습니다.
+
+## Vue.js가 무엇인가
+
+Vue는 사용자 인터페이스를 만들기 위한 프로그레시브 프레임워크(Progressive Framework) 입니다.  
+→ 일반적인 웹 페이지 뿐만 아니라 PWA(프로그레시브 웹앱) 개발에 용이합니다.
+
+---
+
+## Vue는 점진적으로 채택할 수 있도록 설계되었습니다.
+
+### → vue -> vue router -> vuex
+
+---
+
+## 싱글 파일 컴포넌트(Single File Components, SFC) 란
+
+### → .vue 확장자를 가진 싱글 파일 컴포넌트
+
+---
+
+## Awesome Vue.js - Vue.js와 관련된 선별 된 Awesome 한 목록
+
+### → <https://github.com/vuejs/awesome-vue>
+
+---
+
+## 지원하는 라이브러리
+
+### → <https://github.com/vuejs/awesome-vue#components--libraries>
+
+- Table,
+- Notification(modeless little Popup),
+- Loader(spinners),
+- Tooltip, Overlay(modal popup),
+- Icons(vue-material-design-icons or material-design-icons),
+- Menu(vue-accordion)
+- ...
+
+---
+
+## 단일 페이지 응용 프로그램(Single Page Application) 을 개발하는 데 용이하다.
+
+---
+
+## 다른 프레임워크들과의 비교
+
+### → <https://kr.vuejs.org/v2/guide/comparison.html>
+
+## 1. Vue vs React
+
+## [공통점]
+
+- 가상 DOM 활용
+- 반응형이고 조합 가능한 컴포넌트 제공
+- 코어 라이브러리에 집중, 라우팅 및 전역 상태 관리하는 라이브러리 지원
+
+## [차이점]
+
+### \* 런타임 퍼포먼스(성능)
+
+- 랜더링 성능 - React 도 빠르지만, 실행환경 성능에서 Vue 의 속도가 React 를 앞섭니다.
+- 갱신 성능 - 컴포넌트의 상태가 변경되어 리 렌더링 시 Vue 는 자동으로 추적되므로 React 보다 빠릅니다.
+- 개발 환경 성능에서 Vue 가 React 에 비해 빠릅니다. 개발 환경 성능은 개발 생산성으로 연결됩니다.
+
+### \* 네이티브 렌더링
+
+- React 는 iOS 및 Android 용 기본 렌더링 어플리케이션을 작성할 수 있는 ReactNative 를 지원합니다.
+- Vue 쪽은 동일한 기능을 지원하는 Weex 를 개발 진행중입니다.
+
+## 2. Vue vs Angularjs (Angular 1)
+
+- 일부 Vue 의 문법은 Angularjs와 매우 유사합니다.
+- Angularjs 는 scope 간에 양방향 바인딩을 사용하지만, Vue 는 컴포넌트 간에 단방향의 데이터 흐름을 사용합니다.
+- Angularjs 에 비해 Vue 의 성능이 더 좋습니다. Angularjs 는 watch 와 같은 감시자가 많을 경우 느려집니다.
+
+## 3. Vue vs Angular (Angular 2)
+
+- Angular 2 는 TypeScript 가 필수입니다. TypeScript 는 기존에 Java나 C# 개발자에게 생산성을 올려주는 이점이 있지만, 소규모 개발에서는 용이하지 않습니다.
+- Angular 2, Vue 는 성능적인 측면에서 둘 다 매우 빠르며, 차지하는 용량도 작습니다.
+- Angular 2는 Vue 에 비해 기존 웹개발자가 학습 해야할 것들이 매우 많습니다.
