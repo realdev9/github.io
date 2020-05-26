@@ -2,7 +2,8 @@
 layout: post
 title: Vue.js가 무엇인가
 tags: vue.js, vue, vuejs
-image: https://vuejs.org/images/logo.png
+images: https://vuejs.org/images/logo.png
+author: realdev9
 ---
 
 # 섹션 1 : Vue 관련 개념 정리
