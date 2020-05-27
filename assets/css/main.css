@@ -911,21 +911,22 @@ table tfoot td {
 }
 
 .wrapper {
+  max-width: 1250px;
   position: relative;
 }
 @media screen and (min-width: 64em) {
   .wrapper {
-    padding: 5rem 6rem;
+    padding: 1rem 1rem;
   }
 }
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .wrapper {
-    padding: 3rem 4rem;
+    padding: 1rem 1rem;
   }
 }
 @media screen and (max-width: 42em) {
   .wrapper {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
   }
 }
 
