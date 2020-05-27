@@ -1,7 +1,9 @@
 ---
 layout: post
 title: PWA (Progressive web applications) 는 무엇인가
-tags: vue.js, vue, vuejs
+tags: [vue.js, vue, vuejs]
+img: pwa.png
+author: realdev9
 ---
 
 # PWA (Progressive Web Application)
