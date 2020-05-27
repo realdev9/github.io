@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Vue 시작하기(Getting Started)
-tags: vue.js, vue, vuejs
+tags: [vue.js, vue, vuejs]
+img: logo.png
+author: realdev9
 ---
 
 # Vue 시작하기(Getting Started)
