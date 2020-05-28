@@ -1,12 +1,12 @@
 ---
 layout: post
-title: [Vue Example] Tree 개발
+title: Vue Example - Tree 개발
 tags: [vue.js, vue, vuejs]
 img: logo.png
 author: realdev9
 ---
 
-# [Vue Example] Tree 개발
+# Vue Example - Tree 개발
 
 vue.js Example 원본 ->
 <https://github.com/vuejs/vue/tree/dev/examples/tree>
@@ -158,3 +158,9 @@ data object 의 모든 node 에 id 를 추가하고, item Component 에 v-for �
 
 실제 JSFiddle 에 적용된 소스
 <https://jsfiddle.net/realdev/zo894ked/6>
+
+참고 - 아래 링크를 통해 codesandbox 에서도 해당 소스를 확인할 수 있습니다.
+
+이 소스를 vue sfc 환경의 import 형태로 변경해보면, 좀 더 vue 를 활용하는데 도움이 될 수 있습니다.
+
+<https://codesandbox.io/s/github/vuejs/vuejs.org/tree/master/src/v2/examples/vue-20-tree-view?from-embed>
