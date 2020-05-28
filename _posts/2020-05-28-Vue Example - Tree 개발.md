@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vue Example - Tree 개발
-tags: [vue.js, vue, vuejs]
+tags: [vue tree, vue example tree, vue.js, vue, vuejs]
 img: tree1.png
 author: realdev9
 ---
