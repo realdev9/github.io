@@ -2,7 +2,7 @@
 layout: post
 title: Vue Example - Tree 개발
 tags: [vue.js, vue, vuejs]
-img: logo.png
+img: tree1.png
 author: realdev9
 ---
 
@@ -26,6 +26,8 @@ vue.js Example 원본 ->
 JSFiddle - <https://jsfiddle.net/>
 
 JSFiddle 에 바로 적용해 분석해 보기
+
+![tree2](/assets/img/tree2.png 'tree 개발 example')
 
 [html]
 
