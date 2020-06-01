@@ -2,7 +2,7 @@
 layout: post
 title: Vue Example - Markdown Editor 개발
 tags: [vue tree, vue example markdown editor, vue.js, vue, vuejs]
-img: tree1.png
+img: markdown1.png
 author: realdev9
 ---
 
@@ -26,6 +26,8 @@ vue.js Example 원본 ->
 JSFiddle - <https://jsfiddle.net/>
 
 JSFiddle 에 바로 적용해 분석해 보기
+
+![markdown2](/assets/img/markdown2.png 'Markdown Editor 개발 example')
 
 [html]
 
