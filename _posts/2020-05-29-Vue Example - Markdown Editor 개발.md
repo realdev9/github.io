@@ -32,6 +32,7 @@ JSFiddle 에 바로 적용해 분석해 보기
 ```html
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://unpkg.com/lodash@4.16.0"></script>
 <!-- the demo root element -->
 <div id="editor">
   <textarea :value="input" @input="update"></textarea>
